@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloActivity">
         <activity
-            android:name=".TestActivity2"
+            android:name=".TestActivity1"
             android:exported="true" />
         <activity
-            android:name=".TestActivity1"
+            android:name=".TestActivity2"
             android:exported="true" />
         <activity android:name=".MainActivity">
             <intent-filter>

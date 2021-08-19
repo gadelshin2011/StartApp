@@ -23,22 +23,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(bindingClass.root)
 
 
-
-
-
-
         }
 
-    fun onClickGoMain(view: View){
-        val intent = Intent(this, TestActivity1::class.java)
-        startActivity(intent)
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == 100 && resultCode == RESULT_OK && data != null){
+            bindingClass.twMessagTest1.text = data.getStringExtra("key")
 
+        }
+    }
 
+    fun onClickTest1(view: View){
+        val i = Intent(this, TestActivity1::class.java)
+        i.putExtra("key","Как дела?")
+        startActivityForResult(i,100)
     }
-    fun onClickGoMain2(view: View){
-        val intent = Intent(this, TestActivity2::class.java)
-        startActivity(intent)
-    }
+
 
 
 
