@@ -2,6 +2,10 @@
     <string name="app_name">HelloActivity</string>
     <string name="ok" translatable="false">OK</string>
     <string name="hello">Hello</string>
+    <string name="key" translatable="false">Key</string>
+    <string name="key2" translatable="false">Key2</string>
+
+
 
 
 </resources>

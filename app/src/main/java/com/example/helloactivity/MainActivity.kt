@@ -1,6 +1,7 @@
 package com.example.helloactivity
 
 import android.content.Intent
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import android.view.View
 import androidx.core.view.isGone
 import com.example.helloactivity.Constance.Constance
 import com.example.helloactivity.databinding.ActivityMainBinding
+import com.example.helloactivity.databinding.ActivityTest2Binding
 import kotlin.system.exitProcess
 
 
@@ -25,18 +27,32 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == 100 && resultCode == RESULT_OK && data != null){
-            bindingClass.twMessagTest1.text = data.getStringExtra("key")
+            bindingClass.twMessagTest1.visibility = View.VISIBLE
+            bindingClass.twMessagTest1.text = data.getStringExtra(R.string.key.toString())
+            }
 
+        if (requestCode == 101 && resultCode == RESULT_OK && data != null){
+            bindingClass.twMessagTest2.visibility =View.VISIBLE
+            bindingClass.twMessagTest2.text= data.getStringExtra(R.string.key2.toString())
         }
     }
 
     fun onClickTest1(view: View){
-        val i = Intent(this, TestActivity1::class.java)
-        i.putExtra("key","Как дела?")
-        startActivityForResult(i,100)
+        val test1 = Intent(this, TestActivity1::class.java)
+        .putExtra(R.string.key.toString(),"Как дела?")
+        startActivityForResult(test1,100)
+    }
+
+    fun onClickTest2(view: View){
+        var test2 = Intent(this, TestActivity2::class.java)
+        .putExtra(R.string.key2.toString(),"Что делаешь?")
+        startActivityForResult(test2,101)
+
+
     }
 
 

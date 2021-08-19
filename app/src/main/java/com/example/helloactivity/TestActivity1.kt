@@ -18,14 +18,14 @@ class TestActivity1 : AppCompatActivity() {
         setContentView(bindingClass.root)
 
 
-        val message = intent.getStringExtra("key")
+        val message = intent.getStringExtra(R.string.key.toString())
         bindingClass.twMessage.text = message
 
 
     }
 
     fun onClickBack(view: View){
-        intent.putExtra("key2", bindingClass.tw2.text.toString())
+        intent.putExtra(R.string.key.toString(), bindingClass.tw2.text.toString())
         setResult(RESULT_OK, intent)
         finish()
     }

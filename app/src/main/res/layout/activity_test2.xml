@@ -7,39 +7,55 @@
 
     <Button
         android:id="@+id/AnswerB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginLeft="152dp"
-        android:layout_marginTop="186dp"
+        android:layout_width="207dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="165dp"
         android:layout_marginRight="165dp"
-        android:layout_marginBottom="497dp"
+        android:onClick="onClickBack2"
+        app:icon="@android:drawable/ic_menu_upload"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/twBack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/twBack"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:text="Answer" />
+        app:layout_constraintVertical_bias="0.645"
+        android:text="Answer"
+        />
 
     <EditText
-        android:id="@+id/twMessage2"
+        android:id="@+id/twBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="101dp"
         android:layout_marginLeft="101dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="340dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginBottom="410dp"
+        android:layout_marginBottom="150dp"
         android:ems="10"
         android:hint="Введите текст"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/AnswerB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AnswerB"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381" />
+
+    <TextView
+        android:id="@+id/twMessage2"
+        android:layout_width="204dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="213dp"
+        android:layout_marginEnd="187dp"
+        android:layout_marginRight="187dp"
+        android:layout_marginBottom="107dp"
+        app:layout_constraintBottom_toTopOf="@+id/twBack"
+        app:layout_constraintEnd_toEndOf="@+id/twBack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/twBack"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
